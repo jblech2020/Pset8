@@ -8,14 +8,24 @@ public class Exercises {
 		if ((a[a.length-1] == b[b.length-1]) || (a[0] == b[0])){
 			return true;
 		}
-		
+
 		return  false;	// default return value to ensure compilation
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-		// write your code here
+		if (values == null || values.length < n || n < 0) {
+			return null;
+		}
 
-		return null;	// default return value to ensure compilation
+		String[] firstLast = new String[n*2];
+		for (int i = 0; i < numbers.length; i++) {
+			firstLast[i] = values.Length[i]
+		}
+
+		firstLast[0] = values[0];
+		firstLast[1] = values[values.length-1];
+
+		return firstLast;	// default return value to ensure compilation
 	}
 
 	public int difference(int[] numbers) {
