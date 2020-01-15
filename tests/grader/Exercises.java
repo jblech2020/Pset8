@@ -5,10 +5,10 @@ public class Exercises {
 			return false;
 		}
 
-		if (a[0] == b[0] || a[a.length] == b[b.length]){
+		if ((a[a.length-1] == b[b.length-1]) || (a[0] == b[0])){
 			return true;
 		}
-
+		
 		return  false;	// default return value to ensure compilation
 	}
 
