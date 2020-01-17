@@ -18,62 +18,26 @@ public class Exercises {
 		}
 
 		String[] firstLast = new String[n*2];
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < values.length; i++) {
 			firstLast[i] = values[i];
 		}
 
-		for (int i = n; i > 0; i--) {
-			firstLast[i] = values[values.length-n];
-		}
+		firstLast[0] = values[0];
+		firstLast[1] = values[values.length-1];
 
 		return firstLast;	// default return value to ensure compilation
 	}
 
 	public int difference(int[] numbers) {
-		int max;
-		int min;
+		// write your code here
 
-		if (numbers == null || numbers.length < 1) {
-			return max;
-		}
-
-		//Finding the min and max (thanks @gitbook)
-    for (int number : numbers) {
-        if (number > max) {
-          max = number;
-        } else if (number < min){
-					min = number;
-				}
-    }
-
-		return (max/min);		// default return value to ensure compilation
+		return -1;		// default return value to ensure compilation
 	}
 
 	public double biggest(double[] numbers) {
-		//Check things
-		if (numbers == null || numbers.length < 3 || (numbers.length/2) == 0 || ) {
-			return -1;
-		}
-		//Check for negatives
-		for (double number : numbers) {
-			if (number < 0){
-				return -1;
-			}
-		}
+		// write your code here
 
-		double first = numbers[1];
-		double middle = numbers[(numbers.length+1)/2];
-		double last = numbers[numbers.length-1];
-
-		if (first>middle&&first>last) {
-			max = first;
-		} else if (middle>last){
-			max = middle;
-		} else {
-			max last;
-		}
-
-		return max;
+		return -1;		// default return value to ensure compilation
 	}
 
 	public String[] middle(String[] values) {
