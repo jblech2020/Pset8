@@ -1,6 +1,7 @@
 public class Exercises {
 
 	public boolean commonEnd(int[] a, int[] b) {
+		//Check
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;
 		}
@@ -13,6 +14,7 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
+		//Check
 		String empty[] = new String[0];
 		if (values == null || values.length < n || n <= 0) {
 			return empty;
@@ -33,6 +35,7 @@ public class Exercises {
 	}
 
 	public int difference(int[] numbers) {
+		//Check
 		if (numbers == null || numbers.length < 1) {
 			return -1;
 		}
@@ -54,10 +57,11 @@ public class Exercises {
 	}
 
 	public double biggest(double[] numbers) {
+		//Check
 		if (numbers == null || numbers.length < 3 || numbers.length%2 == 0) {
 			return -1;
 		}
-		
+
 		int midIndex = (int)(Math.ceil(numbers.length / 2));
 		double max = -1;
 		for (int i = 0; i < numbers.length; i++) {
@@ -72,9 +76,24 @@ public class Exercises {
 	}
 
 	public String[] middle(String[] values) {
-		// write your code here
+		//Check
+		String empty[] = new String[0];
+		if (values == null || values.length < 3 || (values.length % 2) == 0) {
+			return empty;
+		}
 
-		return null;	// default return value to ensure compilation
+		for (int i = 0; i < values.length; i++) {
+			if (values[i] == null) {
+				return empty;
+			}
+		}
+
+		int middle = values.length / 2;
+		int first = middle - 1;
+		int last = middle + 1;
+
+		String[] result = {values[first], values[middle], values[last]};
+		return result;
 	}
 
 	public boolean increasing(int[] numbers) {
