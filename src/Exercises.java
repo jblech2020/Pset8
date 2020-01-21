@@ -123,6 +123,7 @@ public class Exercises {
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
+		//Check
 		if (numbers == null || numbers.length < 1) {
 			return false;
 		}
@@ -148,9 +149,19 @@ public class Exercises {
 	}
 
 	public boolean consecutive(int[] numbers) {
-		// write your code here
+		//Check
+		if (numbers == null || numbers.length < 3) {
+			return false;
+		}
+		boolean consecutive = false;
 
-		return false;	// default return value to ensure compilation
+		for (int i = 2; i < numbers.length; i++) {
+			if (numbers[i] % 2 == numbers[i-1] % 2 && numbers[i] % 2 == numbers[i-2] % 2) {
+				consecutive = true;
+			}
+		}
+
+		return consecutive;
 	}
 
 	public boolean balance(int[] numbers) {
