@@ -29,9 +29,6 @@ public class Exercises {
 			placeHolder--;
 		}
 
-		firstLast[0] = values[0];
-		firstLast[1] = values[values.length-1];
-
 		return firstLast;	// default return value to ensure compilation
 	}
 
