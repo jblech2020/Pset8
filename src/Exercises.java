@@ -13,12 +13,17 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
+		String[] firstLast;
 		if (values == null || values.length < n || n < 0) {
-			return null;
+			return firstLast[];
 		}
 
-		String[] firstLast = new String[n*2];
-		for (int i = 0; i < values.length; i++) {
+		firstLast = new String[n*2];
+ 		for (int i = 0; i < n; i++) {
+			firstLast[i] = values[i];
+		}
+
+		for (int i = firstLast.length; i > n; i--) {
 			firstLast[i] = values[i];
 		}
 
