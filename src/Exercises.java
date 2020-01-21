@@ -57,6 +57,7 @@ public class Exercises {
 		if (numbers == null || numbers.length < 3 || numbers.length%2 == 0) {
 			return -1;
 		}
+		
 		int midIndex = (int)(Math.ceil(numbers.length / 2));
 		double max = -1;
 		for (int i = 0; i < numbers.length; i++) {
