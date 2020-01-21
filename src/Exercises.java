@@ -14,17 +14,19 @@ public class Exercises {
 
 	public String[] endsMeet(String[] values, int n) {
 		String empty[] = new String[0];
-		if (values == null || values.length < n || n < 0) {
+		if (values == null || values.length < n || n <= 0) {
 			return empty;
 		}
 
 		String firstLast[] = new String[n*2];
- 		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 			firstLast[i] = values[i];
 		}
 
-		for (int i = firstLast.length-1; i > n; i--) {
-			firstLast[i] = values[i];
+		int placeHolder = n;
+		for (int i = n; i < 2*n; i++) {
+			firstLast[i] = values[values.length-placeHolder];
+			placeHolder--;
 		}
 
 		firstLast[0] = values[0];
