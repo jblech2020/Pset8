@@ -97,7 +97,26 @@ public class Exercises {
 	}
 
 	public boolean increasing(int[] numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 3) {
+			return false;
+		}
+
+		int lowest = numbers[0];
+		int middle = numbers[1];
+		int last = numbers[2];
+		for (int i = 0; i < numbers.length; i++) {
+			if (lowest < middle && middle < last) {
+				return true;
+			}
+
+			if (i + 2 < numbers.length) {
+					lowest = numbers[i];
+					middle = numbers[i + 1];
+					last = numbers[i + 2];
+				} else {
+					return false;
+			}
+		}
 
 		return false;	// default return value to ensure compilation
 	}
