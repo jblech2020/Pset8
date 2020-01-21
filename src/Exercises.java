@@ -165,6 +165,7 @@ public class Exercises {
 	}
 
 	public boolean balance(int[] numbers) {
+		//Check
 		if (numbers == null || numbers.length < 2) {
 				return false;
 			}
@@ -186,6 +187,7 @@ public class Exercises {
 	}
 
 	public int clumps(String[] values) {
+		//Check
 		if (values == null) {
 			return -1;
 		}
